@@ -1,0 +1,1162 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37A669A32D4FA2C200F9122F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A669A22D4FA2C200F9122F /* AppDelegate.swift */; };
+		37A669A72D4FA2C200F9122F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A669A62D4FA2C200F9122F /* LoginViewController.swift */; };
+		37A669AC2D4FA2C300F9122F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A669AB2D4FA2C300F9122F /* Assets.xcassets */; };
+		37A669D32D4FA30A00F9122F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A669D22D4FA30A00F9122F /* HomeViewController.swift */; };
+		37A669D52D4FA33900F9122F /* LoanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A669D42D4FA33900F9122F /* LoanRepository.swift */; };
+		37A669D72D4FA58200F9122F /* loans.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A669D62D4FA3F100F9122F /* loans.json */; };
+		D50304652D80B583008A6A49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304642D80B583008A6A49 /* User.swift */; };
+		D50304682D80B633008A6A49 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304672D80B633008A6A49 /* SessionManager.swift */; };
+		D503046A2D80BBA7008A6A49 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304692D80BBA7008A6A49 /* Token.swift */; };
+		D503046E2D80BE01008A6A49 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503046D2D80BE01008A6A49 /* AuthenticationService.swift */; };
+		D50304702D80C0DA008A6A49 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503046F2D80C0DA008A6A49 /* LoginViewModel.swift */; };
+		D50304732D80C12D008A6A49 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304722D80C12D008A6A49 /* BaseViewModel.swift */; };
+		D50304762D80C5B4008A6A49 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304752D80C5B4008A6A49 /* BaseViewController.swift */; };
+		D50304792D80E26C008A6A49 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304782D80E26C008A6A49 /* Router.swift */; };
+		D503047B2D80E2B1008A6A49 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503047A2D80E2B1008A6A49 /* LoginRouter.swift */; };
+		D503047E2D80E2ED008A6A49 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503047D2D80E2ED008A6A49 /* HomeRouter.swift */; };
+		D50304802D80E5F7008A6A49 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503047F2D80E5F7008A6A49 /* HomeViewModel.swift */; };
+		D50304832D80F29F008A6A49 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50304822D80F29F008A6A49 /* Factories.swift */; };
+		D50D70072D7F88FA00229649 /* EmailFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D70062D7F88FA00229649 /* EmailFormViewModel.swift */; };
+		D516D5482D7B9546002C74F2 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5472D7B9546002C74F2 /* BaseLabel.swift */; };
+		D516D54C2D7B97B2002C74F2 /* LabelStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D54B2D7B97B2002C74F2 /* LabelStyleProvider.swift */; };
+		D516D54E2D7B9A31002C74F2 /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D54D2D7B9A31002C74F2 /* ErrorLabel.swift */; };
+		D516D5502D7B9E6D002C74F2 /* ErrorLabelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D54F2D7B9E6D002C74F2 /* ErrorLabelProvider.swift */; };
+		D516D5522D7BA0A1002C74F2 /* BasicLabelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5512D7BA0A1002C74F2 /* BasicLabelProvider.swift */; };
+		D516D5542D7BA128002C74F2 /* BasicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5532D7BA128002C74F2 /* BasicLabel.swift */; };
+		D516D5572D7BA2A3002C74F2 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5562D7BA2A3002C74F2 /* FormView.swift */; };
+		D516D55A2D7BA47C002C74F2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5592D7BA47C002C74F2 /* BaseView.swift */; };
+		D516D55D2D7BB3DD002C74F2 /* ValidationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D55C2D7BB3DD002C74F2 /* ValidationProvider.swift */; };
+		D516D55F2D7BB496002C74F2 /* EmailValidationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D55E2D7BB496002C74F2 /* EmailValidationProvider.swift */; };
+		D516D5612D7BB6D0002C74F2 /* PasswordValidationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5602D7BB6D0002C74F2 /* PasswordValidationProvider.swift */; };
+		D516D5632D7BC1C5002C74F2 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516D5622D7BC1C5002C74F2 /* FormViewModel.swift */; };
+		D530E3BF2D81FE5E00809929 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3BE2D81FE5E00809929 /* BaseTableViewCell.swift */; };
+		D530E3C22D81FF2500809929 /* LoanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3C12D81FF2500809929 /* LoanTableViewCell.swift */; };
+		D530E3C42D8200BD00809929 /* HeadlineLabelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3C32D8200BD00809929 /* HeadlineLabelProvider.swift */; };
+		D530E3C62D8200F600809929 /* HeadlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3C52D8200F600809929 /* HeadlineLabel.swift */; };
+		D530E3C82D8202C100809929 /* StatusLabelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3C72D8202C100809929 /* StatusLabelProvider.swift */; };
+		D530E3CA2D82037700809929 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3C92D82037700809929 /* StatusLabel.swift */; };
+		D530E3CF2D82275000809929 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3CE2D82275000809929 /* Loan.swift */; };
+		D530E3D12D82277A00809929 /* LoanStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3D02D82277A00809929 /* LoanStrategy.swift */; };
+		D530E3D32D8227BB00809929 /* ActiveLoanStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3D22D8227BB00809929 /* ActiveLoanStrategy.swift */; };
+		D530E3D52D8227D200809929 /* OverdueLoanStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3D42D8227D200809929 /* OverdueLoanStrategy.swift */; };
+		D530E3D72D8227E200809929 /* DefaultLoanStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3D62D8227E200809929 /* DefaultLoanStrategy.swift */; };
+		D530E3DA2D82283000809929 /* LoanStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3D92D82283000809929 /* LoanStrategyFactory.swift */; };
+		D530E3DD2D8228E500809929 /* LoanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3DC2D8228E500809929 /* LoanManager.swift */; };
+		D530E3E02D822A6200809929 /* MockLoanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530E3DF2D822A6200809929 /* MockLoanService.swift */; };
+		D55731082D8307A900BF3049 /* KliqLoanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731072D8307A900BF3049 /* KliqLoanAppUITests.swift */; };
+		D557310A2D8307A900BF3049 /* KliqLoanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731092D8307A900BF3049 /* KliqLoanAppUITestsLaunchTests.swift */; };
+		D55731312D83080800BF3049 /* FormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557311D2D83080800BF3049 /* FormViewModelTests.swift */; };
+		D55731322D83080800BF3049 /* EmailFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557311F2D83080800BF3049 /* EmailFormViewModelTests.swift */; };
+		D55731332D83080800BF3049 /* PasswordFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731212D83080800BF3049 /* PasswordFormViewModelTests.swift */; };
+		D55731342D83080800BF3049 /* BaseViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731242D83080800BF3049 /* BaseViewModelTests.swift */; };
+		D55731352D83080800BF3049 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731262D83080800BF3049 /* HomeViewModelTests.swift */; };
+		D55731362D83080800BF3049 /* MockHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731272D83080800BF3049 /* MockHomeRouter.swift */; };
+		D55731372D83080800BF3049 /* MockLoanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55731282D83080800BF3049 /* MockLoanRepository.swift */; };
+		D55731382D83080800BF3049 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557312A2D83080800BF3049 /* LoginViewModelTests.swift */; };
+		D55731392D83080800BF3049 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557312B2D83080800BF3049 /* MockAuthService.swift */; };
+		D557313A2D83080800BF3049 /* MockLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557312C2D83080800BF3049 /* MockLoginRouter.swift */; };
+		D557313B2D83080800BF3049 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557312F2D83080800BF3049 /* TestConstants.swift */; };
+		D557313D2D83087900BF3049 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = D557313C2D83087900BF3049 /* RxTest */; };
+		D5C264102D7F9263000F7BE2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D5C2640F2D7F9263000F7BE2 /* RxSwift */; };
+		D5C264122D7F929B000F7BE2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D5C264112D7F929B000F7BE2 /* RxRelay */; };
+		D5C264142D7F995E000F7BE2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D5C264132D7F995E000F7BE2 /* RxCocoa */; };
+		D5C264162D7FA80B000F7BE2 /* PasswordFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C264152D7FA80B000F7BE2 /* PasswordFormViewModel.swift */; };
+		D5C2641A2D80804B000F7BE2 /* PasswordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C264192D80804A000F7BE2 /* PasswordFormView.swift */; };
+		D5E668F12D83022C002A38D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E668F02D83022C002A38D1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D557310B2D8307A900BF3049 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37A669972D4FA2C200F9122F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A6699E2D4FA2C200F9122F;
+			remoteInfo = KliqLoanApp;
+		};
+		D55731182D8307D700BF3049 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37A669972D4FA2C200F9122F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A6699E2D4FA2C200F9122F;
+			remoteInfo = KliqLoanApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37A6699F2D4FA2C200F9122F /* KliqLoanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KliqLoanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A669A22D4FA2C200F9122F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37A669A62D4FA2C200F9122F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37A669AB2D4FA2C300F9122F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37A669B02D4FA2C300F9122F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A669D22D4FA30A00F9122F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		37A669D42D4FA33900F9122F /* LoanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanRepository.swift; sourceTree = "<group>"; };
+		37A669D62D4FA3F100F9122F /* loans.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loans.json; sourceTree = "<group>"; };
+		D50304642D80B583008A6A49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D50304672D80B633008A6A49 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		D50304692D80BBA7008A6A49 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		D503046D2D80BE01008A6A49 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		D503046F2D80C0DA008A6A49 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D50304722D80C12D008A6A49 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D50304752D80C5B4008A6A49 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D50304782D80E26C008A6A49 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D503047A2D80E2B1008A6A49 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D503047D2D80E2ED008A6A49 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D503047F2D80E5F7008A6A49 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D50304822D80F29F008A6A49 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		D50D70062D7F88FA00229649 /* EmailFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormViewModel.swift; sourceTree = "<group>"; };
+		D516D5472D7B9546002C74F2 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		D516D54B2D7B97B2002C74F2 /* LabelStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleProvider.swift; sourceTree = "<group>"; };
+		D516D54D2D7B9A31002C74F2 /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
+		D516D54F2D7B9E6D002C74F2 /* ErrorLabelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabelProvider.swift; sourceTree = "<group>"; };
+		D516D5512D7BA0A1002C74F2 /* BasicLabelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelProvider.swift; sourceTree = "<group>"; };
+		D516D5532D7BA128002C74F2 /* BasicLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabel.swift; sourceTree = "<group>"; };
+		D516D5562D7BA2A3002C74F2 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		D516D5592D7BA47C002C74F2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D516D55C2D7BB3DD002C74F2 /* ValidationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationProvider.swift; sourceTree = "<group>"; };
+		D516D55E2D7BB496002C74F2 /* EmailValidationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationProvider.swift; sourceTree = "<group>"; };
+		D516D5602D7BB6D0002C74F2 /* PasswordValidationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationProvider.swift; sourceTree = "<group>"; };
+		D516D5622D7BC1C5002C74F2 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		D530E3BE2D81FE5E00809929 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		D530E3C12D81FF2500809929 /* LoanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTableViewCell.swift; sourceTree = "<group>"; };
+		D530E3C32D8200BD00809929 /* HeadlineLabelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineLabelProvider.swift; sourceTree = "<group>"; };
+		D530E3C52D8200F600809929 /* HeadlineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineLabel.swift; sourceTree = "<group>"; };
+		D530E3C72D8202C100809929 /* StatusLabelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabelProvider.swift; sourceTree = "<group>"; };
+		D530E3C92D82037700809929 /* StatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
+		D530E3CE2D82275000809929 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		D530E3D02D82277A00809929 /* LoanStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanStrategy.swift; sourceTree = "<group>"; };
+		D530E3D22D8227BB00809929 /* ActiveLoanStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLoanStrategy.swift; sourceTree = "<group>"; };
+		D530E3D42D8227D200809929 /* OverdueLoanStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverdueLoanStrategy.swift; sourceTree = "<group>"; };
+		D530E3D62D8227E200809929 /* DefaultLoanStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoanStrategy.swift; sourceTree = "<group>"; };
+		D530E3D92D82283000809929 /* LoanStrategyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanStrategyFactory.swift; sourceTree = "<group>"; };
+		D530E3DC2D8228E500809929 /* LoanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanManager.swift; sourceTree = "<group>"; };
+		D530E3DF2D822A6200809929 /* MockLoanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoanService.swift; sourceTree = "<group>"; };
+		D530E3EA2D82330000809929 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D55731052D8307A900BF3049 /* KliqLoanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KliqLoanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55731072D8307A900BF3049 /* KliqLoanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KliqLoanAppUITests.swift; sourceTree = "<group>"; };
+		D55731092D8307A900BF3049 /* KliqLoanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KliqLoanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D55731142D8307D700BF3049 /* KliqLoanAppUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KliqLoanAppUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D557311D2D83080800BF3049 /* FormViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewModelTests.swift; sourceTree = "<group>"; };
+		D557311F2D83080800BF3049 /* EmailFormViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailFormViewModelTests.swift; sourceTree = "<group>"; };
+		D55731212D83080800BF3049 /* PasswordFormViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordFormViewModelTests.swift; sourceTree = "<group>"; };
+		D55731242D83080800BF3049 /* BaseViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModelTests.swift; sourceTree = "<group>"; };
+		D55731262D83080800BF3049 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		D55731272D83080800BF3049 /* MockHomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHomeRouter.swift; sourceTree = "<group>"; };
+		D55731282D83080800BF3049 /* MockLoanRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoanRepository.swift; sourceTree = "<group>"; };
+		D557312A2D83080800BF3049 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		D557312B2D83080800BF3049 /* MockAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		D557312C2D83080800BF3049 /* MockLoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLoginRouter.swift; sourceTree = "<group>"; };
+		D557312F2D83080800BF3049 /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		D5C264152D7FA80B000F7BE2 /* PasswordFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFormViewModel.swift; sourceTree = "<group>"; };
+		D5C264192D80804A000F7BE2 /* PasswordFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFormView.swift; sourceTree = "<group>"; };
+		D5E668F02D83022C002A38D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KliqLoanApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37A6699C2D4FA2C200F9122F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C264142D7F995E000F7BE2 /* RxCocoa in Frameworks */,
+				D5C264122D7F929B000F7BE2 /* RxRelay in Frameworks */,
+				D5C264102D7F9263000F7BE2 /* RxSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731022D8307A900BF3049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731112D8307D700BF3049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D557313D2D83087900BF3049 /* RxTest in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37A669962D4FA2C200F9122F = {
+			isa = PBXGroup;
+			children = (
+				D5E668F02D83022C002A38D1 /* LaunchScreen.storyboard */,
+				37A669A12D4FA2C200F9122F /* KliqLoanApp */,
+				D55731062D8307A900BF3049 /* KliqLoanAppUITests */,
+				D55731152D8307D700BF3049 /* KliqLoanAppUnitTests */,
+				37A669A02D4FA2C200F9122F /* Products */,
+				D5C2640E2D7F9263000F7BE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37A669A02D4FA2C200F9122F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37A6699F2D4FA2C200F9122F /* KliqLoanApp.app */,
+				D55731052D8307A900BF3049 /* KliqLoanAppUITests.xctest */,
+				D55731142D8307D700BF3049 /* KliqLoanAppUnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37A669A12D4FA2C200F9122F /* KliqLoanApp */ = {
+			isa = PBXGroup;
+			children = (
+				D503046B2D80BCCC008A6A49 /* Application */,
+				D516D5422D7B93DB002C74F2 /* Data */,
+				D516D5432D7B93E1002C74F2 /* Domain */,
+				D516D5412D7B93BE002C74F2 /* Infrastructure */,
+				D516D5402D7B93AB002C74F2 /* Presentation */,
+				37A669AB2D4FA2C300F9122F /* Assets.xcassets */,
+				37A669B02D4FA2C300F9122F /* Info.plist */,
+			);
+			path = KliqLoanApp;
+			sourceTree = "<group>";
+		};
+		D50304632D80B578008A6A49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D50304642D80B583008A6A49 /* User.swift */,
+				D50304692D80BBA7008A6A49 /* Token.swift */,
+				D530E3CE2D82275000809929 /* Loan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D50304662D80B628008A6A49 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D50304672D80B633008A6A49 /* SessionManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D503046B2D80BCCC008A6A49 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				37A669A22D4FA2C200F9122F /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D503046C2D80BDE9008A6A49 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D503046D2D80BE01008A6A49 /* AuthenticationService.swift */,
+				D530E3DF2D822A6200809929 /* MockLoanService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D50304712D80C123008A6A49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D50304722D80C12D008A6A49 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D50304742D80C4DC008A6A49 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D50304752D80C5B4008A6A49 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D50304772D80D670008A6A49 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D50304782D80E26C008A6A49 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D503047C2D80E2E0008A6A49 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D503047D2D80E2ED008A6A49 /* HomeRouter.swift */,
+				D503047F2D80E5F7008A6A49 /* HomeViewModel.swift */,
+				37A669D22D4FA30A00F9122F /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D50304812D80F295008A6A49 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D50304822D80F29F008A6A49 /* Factories.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D516D53E2D7B938B002C74F2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D503047C2D80E2E0008A6A49 /* Home */,
+				D516D53F2D7B939A002C74F2 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D516D53F2D7B939A002C74F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				37A669A62D4FA2C200F9122F /* LoginViewController.swift */,
+				D503046F2D80C0DA008A6A49 /* LoginViewModel.swift */,
+				D503047A2D80E2B1008A6A49 /* LoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D516D5402D7B93AB002C74F2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D50304812D80F295008A6A49 /* Factory */,
+				D516D5452D7B9456002C74F2 /* Base */,
+				D516D5442D7B944C002C74F2 /* Components */,
+				D516D53E2D7B938B002C74F2 /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D516D5412D7B93BE002C74F2 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D503046C2D80BDE9008A6A49 /* Service */,
+				D530E3CB2D82270D00809929 /* Repository */,
+				D50304662D80B628008A6A49 /* Manager */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D516D5422D7B93DB002C74F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3DE2D8229FE00809929 /* Mock */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D516D5432D7B93E1002C74F2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3D82D82282400809929 /* Factory */,
+				D530E3CC2D82272700809929 /* Strategies */,
+				D50304632D80B578008A6A49 /* Model */,
+				D530E3DB2D8228DB00809929 /* Manager */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D516D5442D7B944C002C74F2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3C02D81FF1700809929 /* TableViewCell */,
+				D516D5552D7BA1CF002C74F2 /* FormView */,
+				D516D5462D7B953A002C74F2 /* Label */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D516D5452D7B9456002C74F2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3BD2D81FE4E00809929 /* TableViewCell */,
+				D50304772D80D670008A6A49 /* Router */,
+				D50304742D80C4DC008A6A49 /* ViewController */,
+				D50304712D80C123008A6A49 /* ViewModel */,
+				D516D5582D7BA473002C74F2 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D516D5462D7B953A002C74F2 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				D516D5492D7B9796002C74F2 /* LabelProvider */,
+				D516D5472D7B9546002C74F2 /* BaseLabel.swift */,
+				D516D5532D7BA128002C74F2 /* BasicLabel.swift */,
+				D516D54D2D7B9A31002C74F2 /* ErrorLabel.swift */,
+				D530E3C52D8200F600809929 /* HeadlineLabel.swift */,
+				D530E3C92D82037700809929 /* StatusLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		D516D5492D7B9796002C74F2 /* LabelProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D516D54B2D7B97B2002C74F2 /* LabelStyleProvider.swift */,
+				D516D5512D7BA0A1002C74F2 /* BasicLabelProvider.swift */,
+				D516D54F2D7B9E6D002C74F2 /* ErrorLabelProvider.swift */,
+				D530E3C32D8200BD00809929 /* HeadlineLabelProvider.swift */,
+				D530E3C72D8202C100809929 /* StatusLabelProvider.swift */,
+			);
+			path = LabelProvider;
+			sourceTree = "<group>";
+		};
+		D516D5552D7BA1CF002C74F2 /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				D516D55B2D7BB3C4002C74F2 /* Provider */,
+				D516D5562D7BA2A3002C74F2 /* FormView.swift */,
+				D516D5622D7BC1C5002C74F2 /* FormViewModel.swift */,
+				D50D70062D7F88FA00229649 /* EmailFormViewModel.swift */,
+				D5C264152D7FA80B000F7BE2 /* PasswordFormViewModel.swift */,
+				D5C264192D80804A000F7BE2 /* PasswordFormView.swift */,
+			);
+			path = FormView;
+			sourceTree = "<group>";
+		};
+		D516D5582D7BA473002C74F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D516D5592D7BA47C002C74F2 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D516D55B2D7BB3C4002C74F2 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				D516D55C2D7BB3DD002C74F2 /* ValidationProvider.swift */,
+				D516D55E2D7BB496002C74F2 /* EmailValidationProvider.swift */,
+				D516D5602D7BB6D0002C74F2 /* PasswordValidationProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		D530E3BD2D81FE4E00809929 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3BE2D81FE5E00809929 /* BaseTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D530E3C02D81FF1700809929 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3C12D81FF2500809929 /* LoanTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D530E3CB2D82270D00809929 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				37A669D42D4FA33900F9122F /* LoanRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D530E3CC2D82272700809929 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3D02D82277A00809929 /* LoanStrategy.swift */,
+				D530E3D22D8227BB00809929 /* ActiveLoanStrategy.swift */,
+				D530E3D42D8227D200809929 /* OverdueLoanStrategy.swift */,
+				D530E3D62D8227E200809929 /* DefaultLoanStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		D530E3D82D82282400809929 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3D92D82283000809929 /* LoanStrategyFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D530E3DB2D8228DB00809929 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3DC2D8228E500809929 /* LoanManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D530E3DE2D8229FE00809929 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				37A669D62D4FA3F100F9122F /* loans.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D55731062D8307A900BF3049 /* KliqLoanAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D55731072D8307A900BF3049 /* KliqLoanAppUITests.swift */,
+				D55731092D8307A900BF3049 /* KliqLoanAppUITestsLaunchTests.swift */,
+			);
+			path = KliqLoanAppUITests;
+			sourceTree = "<group>";
+		};
+		D55731152D8307D700BF3049 /* KliqLoanAppUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D55731232D83080800BF3049 /* Components */,
+				D557312E2D83080800BF3049 /* Scene */,
+				D55731302D83080800BF3049 /* Utils */,
+			);
+			path = KliqLoanAppUnitTests;
+			sourceTree = "<group>";
+		};
+		D557311E2D83080800BF3049 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D557311D2D83080800BF3049 /* FormViewModelTests.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D55731202D83080800BF3049 /* EmailFormView */ = {
+			isa = PBXGroup;
+			children = (
+				D557311F2D83080800BF3049 /* EmailFormViewModelTests.swift */,
+			);
+			path = EmailFormView;
+			sourceTree = "<group>";
+		};
+		D55731222D83080800BF3049 /* PasswordFormView */ = {
+			isa = PBXGroup;
+			children = (
+				D55731212D83080800BF3049 /* PasswordFormViewModelTests.swift */,
+			);
+			path = PasswordFormView;
+			sourceTree = "<group>";
+		};
+		D55731232D83080800BF3049 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D557311E2D83080800BF3049 /* Base */,
+				D55731202D83080800BF3049 /* EmailFormView */,
+				D55731222D83080800BF3049 /* PasswordFormView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D55731252D83080800BF3049 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D55731242D83080800BF3049 /* BaseViewModelTests.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D55731292D83080800BF3049 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D55731262D83080800BF3049 /* HomeViewModelTests.swift */,
+				D55731272D83080800BF3049 /* MockHomeRouter.swift */,
+				D55731282D83080800BF3049 /* MockLoanRepository.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D557312D2D83080800BF3049 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D557312A2D83080800BF3049 /* LoginViewModelTests.swift */,
+				D557312B2D83080800BF3049 /* MockAuthService.swift */,
+				D557312C2D83080800BF3049 /* MockLoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D557312E2D83080800BF3049 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D55731252D83080800BF3049 /* Base */,
+				D55731292D83080800BF3049 /* Home */,
+				D557312D2D83080800BF3049 /* Login */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		D55731302D83080800BF3049 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D557312F2D83080800BF3049 /* TestConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5C2640E2D7F9263000F7BE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D530E3EA2D82330000809929 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37A6699E2D4FA2C200F9122F /* KliqLoanApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37A669C92D4FA2C300F9122F /* Build configuration list for PBXNativeTarget "KliqLoanApp" */;
+			buildPhases = (
+				37A6699B2D4FA2C200F9122F /* Sources */,
+				37A6699C2D4FA2C200F9122F /* Frameworks */,
+				37A6699D2D4FA2C200F9122F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KliqLoanApp;
+			packageProductDependencies = (
+				D5C2640F2D7F9263000F7BE2 /* RxSwift */,
+				D5C264112D7F929B000F7BE2 /* RxRelay */,
+				D5C264132D7F995E000F7BE2 /* RxCocoa */,
+			);
+			productName = KliqLoanApp;
+			productReference = 37A6699F2D4FA2C200F9122F /* KliqLoanApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D55731042D8307A900BF3049 /* KliqLoanAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D557310D2D8307A900BF3049 /* Build configuration list for PBXNativeTarget "KliqLoanAppUITests" */;
+			buildPhases = (
+				D55731012D8307A900BF3049 /* Sources */,
+				D55731022D8307A900BF3049 /* Frameworks */,
+				D55731032D8307A900BF3049 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D557310C2D8307A900BF3049 /* PBXTargetDependency */,
+			);
+			name = KliqLoanAppUITests;
+			productName = KliqLoanAppUITests;
+			productReference = D55731052D8307A900BF3049 /* KliqLoanAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D55731132D8307D700BF3049 /* KliqLoanAppUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D557311A2D8307D700BF3049 /* Build configuration list for PBXNativeTarget "KliqLoanAppUnitTests" */;
+			buildPhases = (
+				D55731102D8307D700BF3049 /* Sources */,
+				D55731112D8307D700BF3049 /* Frameworks */,
+				D55731122D8307D700BF3049 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55731192D8307D700BF3049 /* PBXTargetDependency */,
+			);
+			name = KliqLoanAppUnitTests;
+			packageProductDependencies = (
+				D557313C2D83087900BF3049 /* RxTest */,
+			);
+			productName = KliqLoanAppUnitTests;
+			productReference = D55731142D8307D700BF3049 /* KliqLoanAppUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37A669972D4FA2C200F9122F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					37A6699E2D4FA2C200F9122F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D55731042D8307A900BF3049 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 37A6699E2D4FA2C200F9122F;
+					};
+					D55731132D8307D700BF3049 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 37A6699E2D4FA2C200F9122F;
+					};
+				};
+			};
+			buildConfigurationList = 37A6699A2D4FA2C200F9122F /* Build configuration list for PBXProject "KliqLoanApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37A669962D4FA2C200F9122F;
+			packageReferences = (
+				D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 37A669A02D4FA2C200F9122F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37A6699E2D4FA2C200F9122F /* KliqLoanApp */,
+				D55731042D8307A900BF3049 /* KliqLoanAppUITests */,
+				D55731132D8307D700BF3049 /* KliqLoanAppUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37A6699D2D4FA2C200F9122F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E668F12D83022C002A38D1 /* LaunchScreen.storyboard in Resources */,
+				37A669AC2D4FA2C300F9122F /* Assets.xcassets in Resources */,
+				37A669D72D4FA58200F9122F /* loans.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731032D8307A900BF3049 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731122D8307D700BF3049 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37A6699B2D4FA2C200F9122F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D516D5502D7B9E6D002C74F2 /* ErrorLabelProvider.swift in Sources */,
+				D530E3DD2D8228E500809929 /* LoanManager.swift in Sources */,
+				D516D54E2D7B9A31002C74F2 /* ErrorLabel.swift in Sources */,
+				D516D5612D7BB6D0002C74F2 /* PasswordValidationProvider.swift in Sources */,
+				37A669A72D4FA2C200F9122F /* LoginViewController.swift in Sources */,
+				D503047E2D80E2ED008A6A49 /* HomeRouter.swift in Sources */,
+				D50304792D80E26C008A6A49 /* Router.swift in Sources */,
+				D516D55A2D7BA47C002C74F2 /* BaseView.swift in Sources */,
+				D5C2641A2D80804B000F7BE2 /* PasswordFormView.swift in Sources */,
+				D530E3DA2D82283000809929 /* LoanStrategyFactory.swift in Sources */,
+				D50304832D80F29F008A6A49 /* Factories.swift in Sources */,
+				D50304732D80C12D008A6A49 /* BaseViewModel.swift in Sources */,
+				D530E3C22D81FF2500809929 /* LoanTableViewCell.swift in Sources */,
+				D516D5522D7BA0A1002C74F2 /* BasicLabelProvider.swift in Sources */,
+				D503046A2D80BBA7008A6A49 /* Token.swift in Sources */,
+				37A669A32D4FA2C200F9122F /* AppDelegate.swift in Sources */,
+				D50304652D80B583008A6A49 /* User.swift in Sources */,
+				D50304802D80E5F7008A6A49 /* HomeViewModel.swift in Sources */,
+				37A669D52D4FA33900F9122F /* LoanRepository.swift in Sources */,
+				D530E3C82D8202C100809929 /* StatusLabelProvider.swift in Sources */,
+				D530E3BF2D81FE5E00809929 /* BaseTableViewCell.swift in Sources */,
+				D530E3E02D822A6200809929 /* MockLoanService.swift in Sources */,
+				D516D55D2D7BB3DD002C74F2 /* ValidationProvider.swift in Sources */,
+				D50304762D80C5B4008A6A49 /* BaseViewController.swift in Sources */,
+				D530E3CF2D82275000809929 /* Loan.swift in Sources */,
+				D5C264162D7FA80B000F7BE2 /* PasswordFormViewModel.swift in Sources */,
+				D50D70072D7F88FA00229649 /* EmailFormViewModel.swift in Sources */,
+				D530E3D12D82277A00809929 /* LoanStrategy.swift in Sources */,
+				D530E3C62D8200F600809929 /* HeadlineLabel.swift in Sources */,
+				37A669D32D4FA30A00F9122F /* HomeViewController.swift in Sources */,
+				D516D5482D7B9546002C74F2 /* BaseLabel.swift in Sources */,
+				D530E3D52D8227D200809929 /* OverdueLoanStrategy.swift in Sources */,
+				D530E3D32D8227BB00809929 /* ActiveLoanStrategy.swift in Sources */,
+				D516D55F2D7BB496002C74F2 /* EmailValidationProvider.swift in Sources */,
+				D516D54C2D7B97B2002C74F2 /* LabelStyleProvider.swift in Sources */,
+				D530E3CA2D82037700809929 /* StatusLabel.swift in Sources */,
+				D516D5542D7BA128002C74F2 /* BasicLabel.swift in Sources */,
+				D516D5632D7BC1C5002C74F2 /* FormViewModel.swift in Sources */,
+				D50304702D80C0DA008A6A49 /* LoginViewModel.swift in Sources */,
+				D516D5572D7BA2A3002C74F2 /* FormView.swift in Sources */,
+				D50304682D80B633008A6A49 /* SessionManager.swift in Sources */,
+				D530E3D72D8227E200809929 /* DefaultLoanStrategy.swift in Sources */,
+				D530E3C42D8200BD00809929 /* HeadlineLabelProvider.swift in Sources */,
+				D503047B2D80E2B1008A6A49 /* LoginRouter.swift in Sources */,
+				D503046E2D80BE01008A6A49 /* AuthenticationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731012D8307A900BF3049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55731082D8307A900BF3049 /* KliqLoanAppUITests.swift in Sources */,
+				D557310A2D8307A900BF3049 /* KliqLoanAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55731102D8307D700BF3049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D557313A2D83080800BF3049 /* MockLoginRouter.swift in Sources */,
+				D55731352D83080800BF3049 /* HomeViewModelTests.swift in Sources */,
+				D557313B2D83080800BF3049 /* TestConstants.swift in Sources */,
+				D55731362D83080800BF3049 /* MockHomeRouter.swift in Sources */,
+				D55731312D83080800BF3049 /* FormViewModelTests.swift in Sources */,
+				D55731372D83080800BF3049 /* MockLoanRepository.swift in Sources */,
+				D55731382D83080800BF3049 /* LoginViewModelTests.swift in Sources */,
+				D55731392D83080800BF3049 /* MockAuthService.swift in Sources */,
+				D55731342D83080800BF3049 /* BaseViewModelTests.swift in Sources */,
+				D55731322D83080800BF3049 /* EmailFormViewModelTests.swift in Sources */,
+				D55731332D83080800BF3049 /* PasswordFormViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D557310C2D8307A900BF3049 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37A6699E2D4FA2C200F9122F /* KliqLoanApp */;
+			targetProxy = D557310B2D8307A900BF3049 /* PBXContainerItemProxy */;
+		};
+		D55731192D8307D700BF3049 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37A6699E2D4FA2C200F9122F /* KliqLoanApp */;
+			targetProxy = D55731182D8307D700BF3049 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		37A669C72D4FA2C300F9122F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37A669C82D4FA2C300F9122F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37A669CA2D4FA2C300F9122F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KliqLoanApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cinaryusuf.KliqLoanApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37A669CB2D4FA2C300F9122F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KliqLoanApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cinaryusuf.KliqLoanApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D557310E2D8307A900BF3049 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fd.KliqLoanAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KliqLoanApp;
+			};
+			name = Debug;
+		};
+		D557310F2D8307A900BF3049 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fd.KliqLoanAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KliqLoanApp;
+			};
+			name = Release;
+		};
+		D557311B2D8307D700BF3049 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fd.KliqLoanAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KliqLoanApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KliqLoanApp";
+			};
+			name = Debug;
+		};
+		D557311C2D8307D700BF3049 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 262MQNTY8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fd.KliqLoanAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KliqLoanApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KliqLoanApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37A6699A2D4FA2C200F9122F /* Build configuration list for PBXProject "KliqLoanApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A669C72D4FA2C300F9122F /* Debug */,
+				37A669C82D4FA2C300F9122F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37A669C92D4FA2C300F9122F /* Build configuration list for PBXNativeTarget "KliqLoanApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A669CA2D4FA2C300F9122F /* Debug */,
+				37A669CB2D4FA2C300F9122F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D557310D2D8307A900BF3049 /* Build configuration list for PBXNativeTarget "KliqLoanAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D557310E2D8307A900BF3049 /* Debug */,
+				D557310F2D8307A900BF3049 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D557311A2D8307D700BF3049 /* Build configuration list for PBXNativeTarget "KliqLoanAppUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D557311B2D8307D700BF3049 /* Debug */,
+				D557311C2D8307D700BF3049 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D557313C2D83087900BF3049 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		D5C2640F2D7F9263000F7BE2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D5C264112D7F929B000F7BE2 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		D5C264132D7F995E000F7BE2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5C2640D2D7F8E40000F7BE2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 37A669972D4FA2C200F9122F /* Project object */;
+}
